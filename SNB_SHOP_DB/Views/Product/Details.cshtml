@@ -1,0 +1,72 @@
+﻿@model SNB_SHOP_DB.Models.ProductModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Szczegóły</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+@*             @Html.DisplayNameFor(model => model.Product_Type1) *@
+            Kategoria
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Product_Type1)
+        </dd>
+        <dt class = "col-sm-2">
+@*             @Html.DisplayNameFor(model => model.Product_Type2) *@
+            Produkt
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Product_Type2)
+        </dd>
+        <dt class = "col-sm-2">
+@*             @Html.DisplayNameFor(model => model.Sex) *@
+            Płeć
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sex)
+        </dd>
+        <dt class = "col-sm-2">
+@*             @Html.DisplayNameFor(model => model.Brand)
+ *@            Producent
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Brand)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Model)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Model)
+        </dd>
+        <dt class = "col-sm-2">
+@*             @Html.DisplayNameFor(model => model.Size) *@
+            Rozmiar
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Size)
+        </dd>
+        <dt class = "col-sm-2">
+@*             @Html.DisplayNameFor(model => model.Stock)
+ *@            Stan magazynowy
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Stock)
+        </dd>
+        <dt class = "col-sm-2">
+@*             @Html.DisplayNameFor(model => model.Price)
+ *@            Cena
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ID">Edytuj</a> |
+    <a asp-action="Index">Wróć do listy produktów</a>
+</div>
